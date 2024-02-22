@@ -1,0 +1,80 @@
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh; /* height 는 100% 라고 설정하면 100% 가 적용되는게 아닌 오류가 있다. */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(images/room.jpg);
+}
+
+.container .header {
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* 이 요소가 항상 좌우 끝으로 붙어서 출력되게 */
+    align-items: center; /* 요소가 항상 header 영역 중앙에 오게끔 설정 */
+}
+
+.container .header h1 a {
+    text-decoration: none;
+    color: white;
+    font-family: abster;
+}
+
+.container .nav ul li {
+    display: inline-block; /* 가로정렬 */
+    margin: 0 10px;
+}
+
+.container .nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.container .nav ul li a:hover {
+    color: #1fdfdf;
+}
+
+.container .hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container .hero h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container .hero p {
+    font-size: 22px;
+}
+
+.container .hero button {
+    background: none;
+    border: 2px solid darkseagreen;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    outline: none; /* 클릭했을 때 잔상 없애는 코드 */
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.container .hero button:hover {
+    background-color: darkslategray;
+}
